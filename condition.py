@@ -1,15 +1,33 @@
-carDisplacement = int(input('자동차 배기량 입력:'))
-if carDisplacement <1000:
-    print('세금 : 100,000원')
-elif carDisplacement <2000 and carDisplacement >=1000:
-    print('세금 : 200,000원')
-elif carDisplacement <3000 and carDisplacement >=2000:
-    print('세금 : 300,000원')
-elif carDisplacement <4000 and carDisplacement >=3000:
-    print('세금 : 400,000원')
-elif carDisplacement <5000 and carDisplacement >=4000:
-    print('세금 : 500,000원')
-elif carDisplacement >= 5000 :
-    print('세금 : 600,000원')
+exampleScore= int(input('시험 점수 입력:'))
+
+if exampleScore <60:
+    print('재시험 대상입니다')
+
+else:
+    if exampleScore >= 90:
+        print('A')
+    elif exampleScore>=80:
+        print('B')
+    elif exampleScore >= 70:
+        print('C')
+    elif exampleScore >- 60:
+        print('D')
 
 
+selectNum=int(input('출퇴근 대상자 인가요? 1. Yes \t 2.No'))
+if selectNum ==1:
+    print('교통수단을 입력하세요.')
+    trans = int(input('1. 도보, 자전거 2. 버스, 지하철 3. 자가용'))
+
+    if trans ==1:
+        print('세금 감면 : 5%')
+    elif trans ==2:
+        print('세금 감면 : 3%')
+    elif trans ==3:
+        print('추가 세금 :1%')
+elif selectNum ==2:
+    print('세금변동이 없습니다.')
+else:
+    print('잘못 입력했습니다.')
+
+print('포인트 사용 가능')
