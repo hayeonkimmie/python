@@ -1,24 +1,44 @@
-for i in range (10):
-    print(i)
+endNum = 10
+n=0
+
+# infinite loop
+# while n <= endNum :  - 0은 10보다 항상 작기 때문에 무한루프에 빠짐.
+#     print(n)
+while n<= endNum:
+    print(n)
+    n +=1
+
+#n이 10이하이면 반복 실행 - 구구단 중 7단
+n=1
+while n<=10:
+    result = 7 * n
+    print('{} * {} = {}'.format(7,n, result))
+    n+=1
 
 
-for i in range (10):
-    result = 7*i
-    print('{} * {} = {}'.format(7,i, result))
+n=0
+while n<10:
+    pass #언젠가는 코딩 할텐데 당장은 하지 않겠다. 오류를 내지말고 일단 패스.
 
-for i in range(10):
-    print('{} * {} = {}'.format(7,i,(7*i)))
+while n<10:
+    print('hello')
+    print('hi')
+    n+=1
 
-for k in range(100):
-    pass #나중에 코딩 하겠다라는 의미. 실행문 당장 입력하지 않더라도, 에러안내고 다음 코드 실행시켜 줌.
+#1부터 100까지 정수 중 2의 배수와 3의 배수를 구분해서 출력하자.
+n=1
+while n<101:
+    if n%2 == 0:
+        print('{}은 2의 배수이다.'.format(n))
 
-for h in range(5):
-    print('Hi', end = ' ')
-    print('loop statement')
+    if n%3 ==0:
+        print('{}은 3의 배수이다.'.format(n))
+    n+=1
 
-for num in range(5):
-    print('Hello python')
-
-for num in range(9):
-    result = gugudanNum * (num+1)
-    print('{} * {} = {}'.format(gugudanNum, (num+1), result))
+n=1
+while n<101:
+    if n%2 ==0:
+        print('{}은 2의 배수이다'.format(n))
+    if n%3 ==0:
+        print('{}은 3의 배수이다.'.format(n))
+    n+=1
