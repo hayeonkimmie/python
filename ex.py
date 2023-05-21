@@ -1,18 +1,29 @@
-# 사용자가 반복의 시작과 끝을 입력하면 1씩 증가하는 반복문을 만들어 보자.
-startNum = int(input('반복의 시작 입력:')) #1
-endNum = int(input('반복의 끝 입력:')) #10
-
-# 위에서 작성한 반복문을 이용해서 2씩 증가하는 반복문을 만들어 보자.
-for i in range (startNum,(endNum+1)):
-    print(i) #1,2,3,4,5,6,7,8,9,10
-
-# 2씩 증가하겠다. 2씩 이상 증가하는 것은 생략 불가함. 단계가 1인 경우만 생략 가능
-for i in range (startNum,(endNum+1),2):
-    print(i)  #1,3,5,6,7,9
-
-# 1에서 100까지의 정수 중 3의 배수에 해당하는 정수만 출력하는 코드를 작성하자.
-for i in range(1,101):
-    if i%3 ==0:
-        print(i) #3,6,9,12.... .99
+name = 'hong gil dong'
+project='야구 글러브'
+orderNo=256956
+payMethod='신용카드'
+productPrice = 1100000
+payPrice = 10000
+usePoint = 10000
+payDate = '2021/08/03 21:50:12'
+payDivCategory = '무'
+payDiv=6
+phone = '02-1234-567'
+print(name, '고객님 안녕하세요.')
+print(name, '고객님의 주문이 완료되었습니다..')
+print(name, '다음은 주문건에 대한 상세내역입니다..')
+print('-' *50)
+print('상품명:', project)
+print('주문번호:', orderNo)
+print('결제방법:', payMethod)
+print('상품금액:', productPrice)
+print('결제금액:', payPrice)
+print('포인트:', usePoint)
+print('결제일시:', payDate)
+print('할부:', payDiv)
+print('할부유형:', payDivCategory)
+print('문의:', phone)
+print('-' *50)
+print('저희 사이트를 이용해주셔서 감사합니다.')
 
 
