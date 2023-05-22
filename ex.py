@@ -1,29 +1,24 @@
-name = 'hong gil dong'
-project='야구 글러브'
-orderNo=256956
-payMethod='신용카드'
-productPrice = 1100000
-payPrice = 10000
-usePoint = 10000
-payDate = '2021/08/03 21:50:12'
-payDivCategory = '무'
-payDiv=6
-phone = '02-1234-567'
-print(name, '고객님 안녕하세요.')
-print(name, '고객님의 주문이 완료되었습니다..')
-print(name, '다음은 주문건에 대한 상세내역입니다..')
-print('-' *50)
-print('상품명:', project)
-print('주문번호:', orderNo)
-print('결제방법:', payMethod)
-print('상품금액:', productPrice)
-print('결제금액:', payPrice)
-print('포인트:', usePoint)
-print('결제일시:', payDate)
-print('할부:', payDiv)
-print('할부유형:', payDivCategory)
-print('문의:', phone)
-print('-' *50)
-print('저희 사이트를 이용해주셔서 감사합니다.')
+# userMsg=input('메시지 입력:')
+# print('메시지 문자열 길이 :{}'.format(len(userMsg)))
 
 
+article = '파이썬(영어:Python)은 1991년 프로그래머인 귀도 반 로섬이 발표한 고급 프로그래밍 언어로,객체지향'
+
+strIdx = article.find('객체지향')
+print('\'객체지향\' 문자열 위치 : {}'.format(strIdx))
+
+width= float(input('가로 길이 입력:'))
+height = float(input('세로 길이 입력:'))
+
+triangleArea = width * height /2
+squareArea = width * height
+
+print('-' * 25)
+print('삼각형 넓이 : %f' %triangleArea)
+print('사각형 넓이 : %f' %squareArea)
+
+print('삼각형 넓이 : %.2f' %triangleArea)
+print('사각형 넓이 : %.2f' %squareArea)
+print ('-' * 25)
+print('삼각형 넓이 : %.3f' %triangleArea)
+print('사각형 넓이 : %.3f' %squareArea)
