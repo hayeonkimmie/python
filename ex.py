@@ -1,37 +1,23 @@
-# BMI = 몸무게(kg)/ 신장(m) * 신장(m))
+# #데이터와 변수 사용법
+# #키오스크에서 사용하는 언어 선택 프로그램을 만들어보자.
 #
-# weight = input('체중 입력(g) :')
-# height = input('신장 입력(cm) :')
-#
-# if weight.isdigit() :
-#     weight = int(weight) /10
-# if height.isdigit():
-#     height = int(height)/100
-#
-# print('체중 :{}kg'.format(weight))
-# print('신장 : {}m'.format(height))
-#
-# bmi = weight / (height * height)
-# print('BMI : %.2f' %bmi)
-
-#
-# num1=10
-# num2=20
-# print('num1: {}, num2 : {}'.format(num1, num2))
-# print('num1: {1}, num2 : {0}'.format(num1, num2))
+# selectNumber = input('언어 선택(choose your language): 1. 한국어  \t 2. English')
+# if selectNumber == '1' :
+#     menu = '1.샌드위치 \t 2. 햄버거 \t 3. 쥬스 \t 4. 커피 \t 5. 아이스크림'
+# elif selectNumber == '2':
+#     menu = '1.Sandwich \t 2. Hamburger \t 3. Juice \t 4. Coffee \t 5. Ice cream'
+# print(menu)
 
 
+import datetime
+today = datetime.datetime.today()
+myAge = input('나이 입력:')
 
-score1= input('중간 고사 점수:')
-score2 = input('기말 고사 점수:')
-
-if score1.isdigit() and score2.isdigit():
-    score1=int(score1)
-    score2= int(score2)
-
-    totalScore = score1+sc ore2
-    avgScore = totalScore/2
-
-    print('총점 : {}, 평균 :{}'.format(totalScore, avgScore))
+if myAge.isdigit() :
+    afterAge = 100 -int(myAge)
+    myHundred = today.year + afterAge
+    print('{}년 ({}년후)에 100살!!'.format(myHundred, afterAge))
 else:
     print('잘못 입력했습니다.')
+
+
