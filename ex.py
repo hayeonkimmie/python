@@ -1,48 +1,37 @@
-# pi = 3.14
-# radius = float(input('반지름(cm) 입력:'))
+# BMI = 몸무게(kg)/ 신장(m) * 신장(m))
 #
-# circleArea = pi * radius * radius
-# circleLength = 2 * pi * radius
+# weight = input('체중 입력(g) :')
+# height = input('신장 입력(cm) :')
 #
-# print('원의 넓이: %d' % circleArea)
-# print('원의 둘레길이: %d' % circleLength)
+# if weight.isdigit() :
+#     weight = int(weight) /10
+# if height.isdigit():
+#     height = int(height)/100
 #
-# print('원의 넓이: %.1f' % circleArea)
-# print('원의 둘레길이: %.1f' % circleLength)
+# print('체중 :{}kg'.format(weight))
+# print('신장 : {}m'.format(height))
 #
+# bmi = weight / (height * height)
+# print('BMI : %.2f' %bmi)
+
 #
-# print('원의 넓이 \t: %d' % circleArea)
-# print('원의 둘레길이 \t: %d' % circleLength)
-#
-# print('원의 넓이 \t: %.1f' % circleArea)
-# print('원의 둘레길이 \t: %.1f' % circleLength)
-
-name = input('이름 입력:')
-mail = input('메일 입력:')
-id = input('아이디 입력:')
-password = input('비밀번호 입력:')
-idNumber1 = input('주민번호 앞자리 입력:')
-idNumber2 = input('주민번호 뒤자리 입력:')
-address = input('주소 입력:')
-
-print('-' *30)
-print('이름 : {}'.format(name))
-print('메일 : {}'.format(mail))
-print('아이디 : {}'.format(id))
-print('비밀번호 : {}'.format(len(password)))
-print('주민번호 : {} - {}'.format(idNumber1, idNumber2))
-print('주소 : {}'.format(address))
-
-
-print(f'이름 : {name}')
-print(f'메일 : {mail}')
-print(f'아이디 : {id}')
-pwStar = '*' * len(password)
-print(f'패스워드: {pwStar}')
-idNumber2Star = idNumber2[0] + ('*' * 6)
-
-print(f'주민번호 : {idNumber1}-{idNumber2Star}')
-print(f'주소 : {address}')
+# num1=10
+# num2=20
+# print('num1: {}, num2 : {}'.format(num1, num2))
+# print('num1: {1}, num2 : {0}'.format(num1, num2))
 
 
 
+score1= input('중간 고사 점수:')
+score2 = input('기말 고사 점수:')
+
+if score1.isdigit() and score2.isdigit():
+    score1=int(score1)
+    score2= int(score2)
+
+    totalScore = score1+sc ore2
+    avgScore = totalScore/2
+
+    print('총점 : {}, 평균 :{}'.format(totalScore, avgScore))
+else:
+    print('잘못 입력했습니다.')
