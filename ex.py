@@ -1,24 +1,48 @@
-# userMsg=input('메시지 입력:')
-# print('메시지 문자열 길이 :{}'.format(len(userMsg)))
+# pi = 3.14
+# radius = float(input('반지름(cm) 입력:'))
+#
+# circleArea = pi * radius * radius
+# circleLength = 2 * pi * radius
+#
+# print('원의 넓이: %d' % circleArea)
+# print('원의 둘레길이: %d' % circleLength)
+#
+# print('원의 넓이: %.1f' % circleArea)
+# print('원의 둘레길이: %.1f' % circleLength)
+#
+#
+# print('원의 넓이 \t: %d' % circleArea)
+# print('원의 둘레길이 \t: %d' % circleLength)
+#
+# print('원의 넓이 \t: %.1f' % circleArea)
+# print('원의 둘레길이 \t: %.1f' % circleLength)
+
+name = input('이름 입력:')
+mail = input('메일 입력:')
+id = input('아이디 입력:')
+password = input('비밀번호 입력:')
+idNumber1 = input('주민번호 앞자리 입력:')
+idNumber2 = input('주민번호 뒤자리 입력:')
+address = input('주소 입력:')
+
+print('-' *30)
+print('이름 : {}'.format(name))
+print('메일 : {}'.format(mail))
+print('아이디 : {}'.format(id))
+print('비밀번호 : {}'.format(len(password)))
+print('주민번호 : {} - {}'.format(idNumber1, idNumber2))
+print('주소 : {}'.format(address))
 
 
-article = '파이썬(영어:Python)은 1991년 프로그래머인 귀도 반 로섬이 발표한 고급 프로그래밍 언어로,객체지향'
+print(f'이름 : {name}')
+print(f'메일 : {mail}')
+print(f'아이디 : {id}')
+pwStar = '*' * len(password)
+print(f'패스워드: {pwStar}')
+idNumber2Star = idNumber2[0] + ('*' * 6)
 
-strIdx = article.find('객체지향')
-print('\'객체지향\' 문자열 위치 : {}'.format(strIdx))
+print(f'주민번호 : {idNumber1}-{idNumber2Star}')
+print(f'주소 : {address}')
 
-width= float(input('가로 길이 입력:'))
-height = float(input('세로 길이 입력:'))
 
-triangleArea = width * height /2
-squareArea = width * height
 
-print('-' * 25)
-print('삼각형 넓이 : %f' %triangleArea)
-print('사각형 넓이 : %f' %squareArea)
-
-print('삼각형 넓이 : %.2f' %triangleArea)
-print('사각형 넓이 : %.2f' %squareArea)
-print ('-' * 25)
-print('삼각형 넓이 : %.3f' %triangleArea)
-print('사각형 넓이 : %.3f' %squareArea)
