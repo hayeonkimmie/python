@@ -1,23 +1,66 @@
-# #데이터와 변수 사용법
-# #키오스크에서 사용하는 언어 선택 프로그램을 만들어보자.
+# money50000 = 50000
+# money10000 = 10000
+ #변수를 나란히 붙여서 설정해줄 수도 있음. 세미콜론 필요
+
+
+money50000=50000 ; money10000 = 10000 ; money5000 = 5000; money1000 = 1000
+money500 = 500 ; money100 = 100 ; money10 = 10
+
+#지폐 각각 몇 장 냈는지. 값은 일단 리셋으로 0 넣어줄 것.
+money50000Cnt = 0 ; money10000Cnt = 0 ; money5000Cnt = 0; money1000Cnt = 0
+money500Cnt = 0 ; money100Cnt = 0 ; money10Cnt = 0
+productPrice = int(input('상품 가격 입력:'))
+payPrice = int(input('지불 금액:'))
+
+# if payPrice > productPrice:
+#     changeMoney = payPrice - productPrice
+#     changeMoney = (changeMoney//10) *10
 #
-# selectNumber = input('언어 선택(choose your language): 1. 한국어  \t 2. English')
-# if selectNumber == '1' :
-#     menu = '1.샌드위치 \t 2. 햄버거 \t 3. 쥬스 \t 4. 커피 \t 5. 아이스크림'
-# elif selectNumber == '2':
-#     menu = '1.Sandwich \t 2. Hamburger \t 3. Juice \t 4. Coffee \t 5. Ice cream'
-# print(menu)
+# if changeMoney > money50000:
+#     money5000Cnt = changeMoney//money50000
+#     changeMoney = changeMoney % money50000
+
+if payPrice > productPrice:
+    changeMoney = payPrice - productPrice
+    changeMoney = (changeMoney//10) *10
+    print('거스름 돈 : {}()원단위 절사'.format(changeMoney))
+
+if changeMoney > money50000:
+    money50000Cnt = changeMoney//money50000
+    changeMoney %= money50000
+
+if changeMoney > money10000:
+    money10000Cnt = changeMoney//money10000
+    changeMoney %= money10000
 
 
-import datetime
-today = datetime.datetime.today()
-myAge = input('나이 입력:')
-
-if myAge.isdigit() :
-    afterAge = 100 -int(myAge)
-    myHundred = today.year + afterAge
-    print('{}년 ({}년후)에 100살!!'.format(myHundred, afterAge))
-else:
-    print('잘못 입력했습니다.')
+if changeMoney > money5000:
+    money5000Cnt = changeMoney//money5000
+    changeMoney %= money5000
 
 
+if changeMoney > money1000:
+    money1000Cnt = changeMoney//money1000
+    changeMoney %= money1000
+
+if changeMoney > money500:
+    money500Cnt = changeMoney//money500
+    changeMoney %= money500
+
+if changeMoney > money100:
+    money100Cnt = changeMoney//money100
+    changeMoney %= money100
+
+if changeMoney > money10:
+    money10Cnt = changeMoney//money10
+    changeMoney %= money10
+
+print( '-'*48)
+print('50,000 {}장'.format(money50000Cnt))
+print('10,000 {}장'.format(money10000Cnt))
+print('5,000 {}장'.format(money5000Cnt))
+print('1,000 {}장'.format(money1000Cnt))
+print('500 {}개'.format(money500Cnt))
+print('100 {}개'.format(money100Cnt))
+print('10 {}개'.format(money10Cnt))
+print('-'*30)
