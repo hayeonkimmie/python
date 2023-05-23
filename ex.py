@@ -1,66 +1,38 @@
-# money50000 = 50000
-# money10000 = 10000
- #변수를 나란히 붙여서 설정해줄 수도 있음. 세미콜론 필요
+koreanScore = int(input('국어 점수 입력:'))
+engScore = int(input('영어 점수 입력 : '))
+matScore = int(input('수학 점수 입력:'))
 
+totalScore = koreanScore + engScore + matScore
+avgScore = totalScore/3
 
-money50000=50000 ; money10000 = 10000 ; money5000 = 5000; money1000 = 1000
-money500 = 500 ; money100 = 100 ; money10 = 10
+maxScore = koreanScore
+maxSubject = '국어'
+if engScore > maxScore :
+    maxScore = engScore
+    maxSubject='영어'
 
-#지폐 각각 몇 장 냈는지. 값은 일단 리셋으로 0 넣어줄 것.
-money50000Cnt = 0 ; money10000Cnt = 0 ; money5000Cnt = 0; money1000Cnt = 0
-money500Cnt = 0 ; money100Cnt = 0 ; money10Cnt = 0
-productPrice = int(input('상품 가격 입력:'))
-payPrice = int(input('지불 금액:'))
+if matScore > maxScore :
+    maxScore = matScore
+    maxSubject = '수학'
 
-# if payPrice > productPrice:
-#     changeMoney = payPrice - productPrice
-#     changeMoney = (changeMoney//10) *10
-#
-# if changeMoney > money50000:
-#     money5000Cnt = changeMoney//money50000
-#     changeMoney = changeMoney % money50000
+minScore = koreanScore
+minSubject = '국어'
+if engScore <minScore:
+    minScore = engScore
+    minSubject ='영어'
 
-if payPrice > productPrice:
-    changeMoney = payPrice - productPrice
-    changeMoney = (changeMoney//10) *10
-    print('거스름 돈 : {}()원단위 절사'.format(changeMoney))
+if matScore<minScore:
+    minScore = matScore
+    minSubject='수학'
 
-if changeMoney > money50000:
-    money50000Cnt = changeMoney//money50000
-    changeMoney %= money50000
+difScore = maxScore -minScore
 
-if changeMoney > money10000:
-    money10000Cnt = changeMoney//money10000
-    changeMoney %= money10000
+print('총점 : {}'.format(totalScore))
+# print('평균: {}'.format(avgScore))
+print('평균 : %.2f' % avgScore)
+print('-' *40)
 
-
-if changeMoney > money5000:
-    money5000Cnt = changeMoney//money5000
-    changeMoney %= money5000
-
-
-if changeMoney > money1000:
-    money1000Cnt = changeMoney//money1000
-    changeMoney %= money1000
-
-if changeMoney > money500:
-    money500Cnt = changeMoney//money500
-    changeMoney %= money500
-
-if changeMoney > money100:
-    money100Cnt = changeMoney//money100
-    changeMoney %= money100
-
-if changeMoney > money10:
-    money10Cnt = changeMoney//money10
-    changeMoney %= money10
-
-print( '-'*48)
-print('50,000 {}장'.format(money50000Cnt))
-print('10,000 {}장'.format(money10000Cnt))
-print('5,000 {}장'.format(money5000Cnt))
-print('1,000 {}장'.format(money1000Cnt))
-print('500 {}개'.format(money500Cnt))
-print('100 {}개'.format(money100Cnt))
-print('10 {}개'.format(money10Cnt))
-print('-'*30)
+print('최고 점수 과목(점수) : {}({})'.format(maxSubject, maxScore))
+print('최저 점수 과목(점수) : {}({})'.format(minSubject, minScore))
+print('최고, 최저 점수 차이 : {}'.format(difScore ))
+print('-' *50)
