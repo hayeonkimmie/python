@@ -1,38 +1,26 @@
-koreanScore = int(input('국어 점수 입력:'))
-engScore = int(input('영어 점수 입력 : '))
-matScore = int(input('수학 점수 입력:'))
+# hour = int(input('시간 입력:'))
+# min = int(input('분 입력:'))
+# sec = int(input('초 입력:'))
+# print('{}초'.format(hour*60*60+min*60+sec))
+#
+# # , 이용하여 가독성을 높이기 위해 format함수 재사용. , 를 사용하면 숫자가 문자 형태로 변환됨.
+# print('{}초'.format(format(hour*60*60+min*60+sec, ',')))
+#
 
-totalScore = koreanScore + engScore + matScore
-avgScore = totalScore/3
+money = int(input('금액 입력:'))
+rate = float(input('이율 입력:'))
+term = int(input('기간 입력:'))
 
-maxScore = koreanScore
-maxSubject = '국어'
-if engScore > maxScore :
-    maxScore = engScore
-    maxSubject='영어'
+targetMoney = money
 
-if matScore > maxScore :
-    maxScore = matScore
-    maxSubject = '수학'
+for i in range(term):
+    #targetMoney=targetMoney + (targetMoney * rate * 0.01)
 
-minScore = koreanScore
-minSubject = '국어'
-if engScore <minScore:
-    minScore = engScore
-    minSubject ='영어'
+    targetMoney+= (targetMoney * rate * 0.01)
 
-if matScore<minScore:
-    minScore = matScore
-    minSubject='수학'
-
-difScore = maxScore -minScore
-
-print('총점 : {}'.format(totalScore))
-# print('평균: {}'.format(avgScore))
-print('평균 : %.2f' % avgScore)
-print('-' *40)
-
-print('최고 점수 과목(점수) : {}({})'.format(maxSubject, maxScore))
-print('최저 점수 과목(점수) : {}({})'.format(minSubject, minScore))
-print('최고, 최저 점수 차이 : {}'.format(difScore ))
-print('-' *50)
+    #1000단위로 끊어줌
+targetMoneyFormated = format(int(targetMoney), ',')
+print('-' *30)
+print('이율:{}'.format(rate))
+print('원금:{}'.format(format(money,',')))
+print('{}년 후 금액:{}'.format(term, targetMoneyFormated))
