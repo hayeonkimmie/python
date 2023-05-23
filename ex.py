@@ -1,26 +1,26 @@
-# baseTemp  = 29
-# step = 60 #60도마다 온도가 내려감
-# stepTemp = 0.8
+# inputAge = int(input('나이 입력:'))
+# if inputAge <=19 or inputAge >=65:
+#     endNum = int(input('출생 연도 끝자리 입력:'))
+#     if endNum == 1 or endNum ==6:
+#         print('월요일 접종 가능!!')
+#     elif endNum ==2 or endNum ==7:
+#         print('화요일 접종 가능!!')
+#     elif endNum == 3 or endNum == 8:
+#         print('수요일 접종 가능!!')
+#     elif endNum == 4 or endNum == 9:
+#         print('목요일 접종 가능!!')
+#     elif endNum == 5 or endNum == 0:
+#         print('금요일 접종 가능!!')
 #
-# height = int(input('고도 입력:'))
-# targetTemp = baseTemp - ((height //step) *0.8)
-# if height % step != 0:
-#     targetTemp = targetTemp + stepTemp
 #
-# print('지면 온도: {}'.format(baseTemp))
-# print('고도: %dm의 기온 : %.2f도' %(height, targetTemp))
-
-bread = 197
-milk = 152
-studentCnt = 17
-
-print('학생 한명이 갖게되는 빵 개수 : {}'.format(bread//studentCnt))
-print('학생 한명이 갖게되는 우유 개수 : {}'.format(milk//studentCnt))
-
-print('남는 빵 개수 : {}'.format(bread %studentCnt))
-
-print('남는 우유 개수 : {}'.format(milk %studentCnt))
+# else:
+#     print('하반기 일정 확인하세요.')
 
 
+byInch = 0.039
+lengthMM = int(input('길이(mm)입력:'))
+
+lengthInch = lengthMM * byInch
+print('{}mm -> {}inch'.format(lengthMM, lengthInch))
 
 
