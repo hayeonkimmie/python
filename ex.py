@@ -1,26 +1,35 @@
-# inputAge = int(input('나이 입력:'))
-# if inputAge <=19 or inputAge >=65:
-#     endNum = int(input('출생 연도 끝자리 입력:'))
-#     if endNum == 1 or endNum ==6:
-#         print('월요일 접종 가능!!')
-#     elif endNum ==2 or endNum ==7:
-#         print('화요일 접종 가능!!')
-#     elif endNum == 3 or endNum == 8:
-#         print('수요일 접종 가능!!')
-#     elif endNum == 4 or endNum == 9:
-#         print('목요일 접종 가능!!')
-#     elif endNum == 5 or endNum == 0:
-#         print('금요일 접종 가능!!')
-#
-#
+# speed= int(input('속도 입력:'))
+# if speed > 50:
+#     print('안전속도 위반!! 과태표 50,000원 부과 대상!!!')
 # else:
-#     print('하반기 일정 확인하세요.')
+#     print('안전속도 준수!!')
 
 
-byInch = 0.039
-lengthMM = int(input('길이(mm)입력:'))
+# inputMsg = input('메시지 입력:')
+# lengthMsg = len(inputMsg)
+# if len(inputMsg) <=50:
+#     print('SMS 발송!!')
+#     print('메시지 길이 : {}'.format(lengthMsg))
+#     print('메시지 발송 요금: 50원')
+# else:
+#     print('MMS 발송!!')
+#     print('메시지 길이 : {}'.format(lengthMsg))
+#     print('메시지 발송 요금: 100원')
 
-lengthInch = lengthMM * byInch
-print('{}mm -> {}inch'.format(lengthMM, lengthInch))
 
+message = input('메시지 입력:')
+lenMessage = len(message)
+msgPrice = 50
 
+if lenMessage <= 50:
+    msgPrice = 50
+    print('SMS 발송!!')
+
+if lenMessage >50:
+    msgPrice = 100
+    print('MMS 발송!!')
+
+print('메시지 길이 : {}'.format(lenMessage))
+print('메시지 발송 요금: {}'.format(msgPrice))
+
+ㄷ
