@@ -1,40 +1,57 @@
-# import random
-# rNum = random.randint(1,1000)
-# tryCount = 0
-#
-#
-# #반복문을 통해 계속 물어보아야 함
-# gameFlag = True
-# while gameFlag :
-#     tryCount +=1
-#     pNum = int(input('1에서 1000까지의 정수 입력:')) #난수를 맞춰보세요
-#
-#     if rNum == pNum :
-#         print('빙고!')
-#         gameFlag = False
-#     else:
-#         if rNum > pNum :
-#             print('난수가 크다!')
-#         else:
-#             print('난수가 작다!')
-#
-# print('난수 : {}, 시도 횟수: {}'.format(rNum, tryCount))
-# 다자 택일문
+#프로그램을 반복 실행하기 위한 반복문
+#1부터 100까지 정수 중 십의자리와 일의자리에 대해 각각 홀/짝수를 구분하는 프로그램을 만들어 보자.
+# for i in range(1,101):
+#     print(i) #1~100 까지 출력 됨
+
+for i in range(1, 101):
+    if i <=9:
+        if i %2 == 0:
+            print('[{}] : 짝수!'.format(i))
+        else:
+            print('[{}] : 홀수!'.format(i))
+
+    else:
+        num10 = i//10
+        num1=i%10
+
+        result10 = ''
+        if num10 %2 ==0:
+            result10 ='짝수'
+        else:
+            result10='홀수'
+
+        result1 = '0'
+        if num1 != 0:
+            if num1 %2 ==0:
+                result1 ='짝수'
+            else:
+                result1='홀수'
 
 
+        print('[{}] 십의자리 : {}, 일의자리 :{}'.format(i, result10, result1))
+# 프로그램을 반복 실행하기 위한 반복문
+# 1부터 100까지 정수 중 십의자리와 일의자리에 대해 각각 홀/짝수를 구분하는 프로그램을 만들어 보자.
+# for i in range(1,101):
+#     print(i) #1~100 까지 출력 됨
+for i in range(1,101):
+    if i<=9:
+        if i %2 ==0:
+            print('[{}] :  짝수!!'.format(i))
+        else:
+            print('[{}] : 홀수!!'.format(i))
 
-innerTemp = int(input('실내 온도 입력:'))
-if innerTemp <= 18:
-    print('에어컨 : OFF!!')
-elif innerTemp >18 and innerTemp <=22:
-    print('에어컨 : 매우 약!!')
-elif innerTemp >22 and innerTemp <=24:
-    print('에어컨 : 약!!')
-elif innerTemp >24 and innerTemp <=26:
-    print('에어컨 : 중!!')
-elif innerTemp >26 and innerTemp <=28:
-    print('에어컨 : 강!!')
-elif innerTemp >28:
-    print('에어컨 : 매우 강!!')
+    else:
+        num10 = i//10
+        num1 =i%10
 
-
+        result10=''
+        if num10 %2 ==0:
+            result10 = '짝수'
+        else:
+            result10 = '홀수'
+        result1 = '0'
+        if result1 != 0:
+            if num1 % 2==0:
+                result1='짝수'
+            else:
+                result1= '홀수'
