@@ -1,57 +1,57 @@
-#프로그램을 반복 실행하기 위한 반복문
-#1부터 100까지 정수 중 십의자리와 일의자리에 대해 각각 홀/짝수를 구분하는 프로그램을 만들어 보자.
-# for i in range(1,101):
-#     print(i) #1~100 까지 출력 됨
 
-for i in range(1, 101):
-    if i <=9:
-        if i %2 == 0:
-            print('[{}] : 짝수!'.format(i))
-        else:
-            print('[{}] : 홀수!'.format(i))
-
-    else:
-        num10 = i//10
-        num1=i%10
-
-        result10 = ''
-        if num10 %2 ==0:
-            result10 ='짝수'
-        else:
-            result10='홀수'
-
-        result1 = '0'
-        if num1 != 0:
-            if num1 %2 ==0:
-                result1 ='짝수'
-            else:
-                result1='홀수'
+str = '*'
+for i in range(1,6):
+    for j in range(i):
+        print('*', end='')
+    print()
 
 
-        print('[{}] 십의자리 : {}, 일의자리 :{}'.format(i, result10, result1))
-# 프로그램을 반복 실행하기 위한 반복문
-# 1부터 100까지 정수 중 십의자리와 일의자리에 대해 각각 홀/짝수를 구분하는 프로그램을 만들어 보자.
-# for i in range(1,101):
-#     print(i) #1~100 까지 출력 됨
-for i in range(1,101):
-    if i<=9:
-        if i %2 ==0:
-            print('[{}] :  짝수!!'.format(i))
-        else:
-            print('[{}] : 홀수!!'.format(i))
+
+for i1 in range (1,6):
+    for i2 in range (6-i1 -1):
+        print(' ',end ='')
+    for i3 in range(i1):
+        print('*', end='')
+
+    print()
+
+
+for i in range(5,0,-1): #단계가 줄어드는 것
+    for j in range(i):
+        print('*', end='')
+    print()
+
+ # for i in range (5,0,-1):
+ #    for j in range(5-i):
+ #        print(' ', end ='') #공백 찍고 끝에는 개행하지 마라.
+ #
+ #    for j in range(i):
+ #        print('*', end='')
+
+
+
+
+for i in range(1,10):
+    if i<5 :
+        for j in range(i): #증가하니까 i만큼 출력
+            print('*', end='')
 
     else:
-        num10 = i//10
-        num1 =i%10
+        for j in range(10-i):
+            print('*', end='')
 
-        result10=''
-        if num10 %2 ==0:
-            result10 = '짝수'
-        else:
-            result10 = '홀수'
-        result1 = '0'
-        if result1 != 0:
-            if num1 % 2==0:
-                result1='짝수'
-            else:
-                result1= '홀수'
+    print()
+
+
+    print()
+
+
+
+for i in range(1,6): #i는 행을 나타내는 숫자.
+    for j in range(1, 6):
+        if j == i:
+            print('*', end='')
+    else:
+        print('*', end='')
+
+    print()
